@@ -1,0 +1,18 @@
+﻿@using Core.entities;
+@model HomeViewModel;
+
+<section class="slides">
+    <h2 class="title">Projects</h2>
+    <!--- Each slide content -->
+    @foreach (var project in Model.Projects)
+    {
+        <div class="content">
+            <div class="content-image"><i class="@project.ImageURL"></i></div>
+            <div class="content-info">
+                <h3>@project.Title</h3>
+                <p>@project.Description</p>
+                <a class="content-button">Learn More.</a>
+            </div>
+        </div>
+    }
+</section>
